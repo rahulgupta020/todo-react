@@ -5,17 +5,18 @@ import Popper from 'popper.js';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import GoogleLogin from "react-google-login";
 
-const clientIdValue="464757477820-5b27p86hca5mevgubbsvrf3e8bf8on9q.apps.googleusercontent.com"
+const clientIdValue=process.env.REACT_APP_GOOGLE_CLIENT_ID
 
 export class App extends Component {
   responseGoogle=(response)=>{
-    console.log(response)
+    const firstFiveChars = clientIdValue.substring(0, 5);
+    console.log("firstFiveChars = ", firstFiveChars)
+    console.log(response.spl)
   }
   render(){
   return (
     <>
      <GoogleLogin
-      // clientId="268887589904-9p434qrn1sn22idp7hlrjfnbd4opj88s.apps.googleusercontent.com"
       clientId={clientIdValue}
       buttonText="Login"
       onSuccess={this.responseGoogle}
