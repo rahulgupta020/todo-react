@@ -5,7 +5,7 @@ import Popper from 'popper.js';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import GoogleLogin from "react-google-login";
 
-const clientIdValue=process.env.REACT_APP_GOOGLE_CLIENT_ID
+const clientIdValue="464757477820-5b27p86hca5mevgubbsvrf3e8bf8on9q.apps.googleusercontent.com"
 
 export class App extends Component {
   responseGoogle=(response)=>{
